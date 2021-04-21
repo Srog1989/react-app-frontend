@@ -2,9 +2,15 @@ import React from 'react'
 
 const Weather = () => {
     return(
-        <div className="container">
-         <h1>Weather App</h1>
-        </div>
+    <div className="container">
+     <div className="cards">
+      <h1>Miami</h1>
+      <h5 className="py-4">
+      <i className="wi wi-day-sunny">
+      </i> 
+      </h5>
+     </div>
+    </div>
     )
 }
 
