@@ -1,0 +1,13 @@
+.bg-default{
+    margin: 0;
+    background: url('./pictures/max-bender-1YHXFeOYpN0-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-cloudy{
+    margin: 0;
+    background: url('./pictures/marina-reich-LZlU_DeNsZg-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
