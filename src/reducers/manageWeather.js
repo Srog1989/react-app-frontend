@@ -1,5 +1,6 @@
 
 export default function manageWeather(state =  {
+    favorites: [],
     city: undefined,
     country: undefined,
     icon: null,
@@ -51,6 +52,9 @@ export default function manageWeather(state =  {
             }
             else {return {...state, icon:action.weatherIcon.Clouds}
           }
+
+          case 'ADD_TO_FAVORITES':
+              return{ ...state, favorites: [...state.favorites, action.favorite]}
       
     default:
       return state;
