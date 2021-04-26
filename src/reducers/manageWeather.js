@@ -1,20 +1,8 @@
-// import "weather-icons/css/weather-icons.css"
-
-// let weatherIcon={
-//     Thunderstorm:"wi-thunderstorm",
-//     Drizzle:"wi-sleet",
-//     Rain:"wi-storm-showers",
-//     Snow:"wi-snow",
-//     Atmosphere:"wi-fog",
-//     Clear:"wi-day-sunny",
-//     Clouds:"wi-day-fog"
-//   }
-
 
 export default function manageWeather(state =  {
     city: undefined,
     country: undefined,
-    icon: undefined,
+    icon: null,
     main: undefined,
     farenheit: undefined,
     temp_max: undefined,

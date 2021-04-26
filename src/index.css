@@ -1,13 +1,55 @@
 .bg-default{
     margin: 0;
-    background: url('./pictures/max-bender-1YHXFeOYpN0-unsplash.jpg');
+    background: url('./pictures/default.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.bg-cloudy{
+.bg-day-fog{
     margin: 0;
-    background: url('./pictures/marina-reich-LZlU_DeNsZg-unsplash.jpg');
+    background: url('./pictures/dayfog.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-thunderstorm{
+    margin: 0;
+    background: url('./pictures/thunderstorm.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-sleet{
+    margin: 0;
+    background: url('./pictures/sleet.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-storm-showers{
+    margin: 0;
+    background: url('./pictures/storm-showers.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-snow{
+    margin: 0;
+    background: url('./pictures/snow.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-fog{
+    margin: 0;
+    background: url('./pictures/fog.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-sunny{
+    margin: 0;
+    background: url('./pictures/sunny.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
 }

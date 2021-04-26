@@ -19,15 +19,6 @@ const API_key="4215bb13a08c02af64771aeabee5aba7"
 
 class WeatherContainer extends Component {
 
-    // setBackground({icon}){
-    //     console.log(icon)
-    //     let body = document.querySelector("#body")
-    //     console.log(body)
-    //     if(icon === "wi-day-fog"){
-    //         body.setAttribute("class", "bg-cloudy")
-    //     }
-    // }
-    
     calFarenheit(temp){
         let faren=Math.floor(((temp - 273.15) * 1.8) + 32)
         return faren
@@ -69,8 +60,7 @@ class WeatherContainer extends Component {
                     temp_min={this.props.temp_min}
                     description={this.props.description}
                     weatherIcon={this.props.icon}
-                />
-                
+                /> 
             </div>
         );
     }
