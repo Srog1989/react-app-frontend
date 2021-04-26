@@ -29,12 +29,4 @@ function minmaxTemp(min,max){
     }
 }
 
-// function error(){
-//     return(
-//         <div className="alert alert-danger mx-5" role="alert">
-//             Please Enter City and Country
-//         </div>
-//     )
-// }
-
 export default Weather
