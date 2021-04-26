@@ -36,7 +36,7 @@ class WeatherContainer extends Component {
             const response = await api_call.json()
             console.log(response)
             const weather = {
-                city: `${response.name},${response.sys.country}`,
+                location: `${response.name},${response.sys.country}`,
                 farenheit: this.calFarenheit(response.main.temp),
                 temp_min: this.calFarenheit(response.main.temp_min),
                 temp_max: this.calFarenheit(response.main.temp_max),
@@ -54,20 +54,19 @@ class WeatherContainer extends Component {
             <div className=".bg-img">
                 <Form loadweather={this.getWeather} error={this.props.error}/>
                 <WeatherInfo
-                    city={this.props.city}
-                    country={this.props.country} 
+                    location={this.props.location}
                     temp_farenheit={this.props.farenheit}
                     temp_max={this.props.temp_max}
                     temp_min={this.props.temp_min}
                     description={this.props.description}
                     weatherIcon={this.props.icon}
                 /> 
-                <Button location={this.props.city} addToFavorites={this.props.addToFavorites}/>
+                <Button location={this.props.location} addToFavorites={this.props.addToFavorites}/>
             </div>
         );
     }
 }
-const mapStateToProps = ({ city, country, temp_farenheit, temp_max, temp_min, description, icon, error}) => ({ city, country, temp_farenheit, temp_max, temp_min, description, icon, error})
+const mapStateToProps = ({ location, temp_farenheit, temp_max, temp_min, description, icon, error}) => ({ location, temp_farenheit, temp_max, temp_min, description, icon, error})
 
 const mapDispatchToProps = dispatch => ({
     setWeather: weather => dispatch({type: "SET_WEATHER", weather }),

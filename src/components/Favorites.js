@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
-const Favorites = () => {
-    return (
-        <div>
-            Favorites
-        </div>
-    );
+class Favorites extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        );
+    }
 }
 
-export default Favorites;
+const mapStateToProps = ({favorites}) => ({favorites});
+
+export default connect(mapStateToProps)(Favorites);
+

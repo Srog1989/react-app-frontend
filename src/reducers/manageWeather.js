@@ -1,8 +1,7 @@
 
 export default function manageWeather(state =  {
     favorites: [],
-    city: undefined,
-    country: undefined,
+    location: undefined,
     icon: null,
     main: undefined,
     farenheit: undefined,
@@ -15,8 +14,7 @@ export default function manageWeather(state =  {
     
     case 'SET_WEATHER':
       return { ...state,   
-        city: action.weather.city,
-        country: action.weather.country,
+        location: action.weather.location,
         icon: action.weather.icon,
         main: action.weather.main,
         farenheit: action.weather.farenheit,
