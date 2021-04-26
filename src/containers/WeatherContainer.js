@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Form from '../components/Form'
 import WeatherInfo from '../components/WeatherInfo'
 import "weather-icons/css/weather-icons.css"
+import Button from '../components/Button'
 
 let weatherIcon={
     Thunderstorm:"wi-thunderstorm",
@@ -61,6 +62,7 @@ class WeatherContainer extends Component {
                     description={this.props.description}
                     weatherIcon={this.props.icon}
                 /> 
+                <Button location={this.props.city} addToFavorites={this.props.addToFavorites}/>
             </div>
         );
     }
@@ -69,7 +71,8 @@ const mapStateToProps = ({ city, country, temp_farenheit, temp_max, temp_min, de
 
 const mapDispatchToProps = dispatch => ({
     setWeather: weather => dispatch({type: "SET_WEATHER", weather }),
-    getWeatherIcon: (weatherIcon, rangeId) => dispatch({type: "GET_WEATHER_ICON", weatherIcon, rangeId })
+    getWeatherIcon: (weatherIcon, rangeId) => dispatch({type: "GET_WEATHER_ICON", weatherIcon, rangeId }),
+    addToFavorites: favorite => dispatch({type: "ADD_TO_FAVORITES", favorite})
 })
 
 
