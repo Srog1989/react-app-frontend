@@ -54,12 +54,12 @@ class WeatherContainer extends Component {
             <div className=".bg-img">
                 <Form loadweather={this.getWeather} error={this.props.error}/>
                 <WeatherInfo
-                    location={this.props.location}
-                    temp_farenheit={this.props.farenheit}
-                    temp_max={this.props.temp_max}
-                    temp_min={this.props.temp_min}
-                    description={this.props.description}
-                    weatherIcon={this.props.icon}
+                    // location={this.props.location}
+                    // temp_farenheit={this.props.farenheit}
+                    // temp_max={this.props.temp_max}
+                    // temp_min={this.props.temp_min}
+                    // description={this.props.description}
+                    // weatherIcon={this.props.icon}
                 /> 
                 <Button location={this.props.location} addToFavorites={this.props.addToFavorites}/>
             </div>
