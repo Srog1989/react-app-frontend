@@ -3,4 +3,7 @@ body{
     background: url('./pictures/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Bradley Hand' !important;
+    font-size: 22px !important;
+    
 }

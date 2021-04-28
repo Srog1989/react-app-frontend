@@ -20,8 +20,8 @@ export default function manageWeather(state =  {
         farenheit: action.weather.farenheit,
         temp_max: action.weather.temp_max,
         temp_min: action.weather.temp_min,
-        description: action.weather.description
-        // error: false
+        description: action.weather.description,
+        error: false
     }
     case 'GET_WEATHER_ICON':
             if(action.rangeId >= 200&&action.rangeId <= 232){

@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 const Weather = ({ location, temp_farenheit, temp_max, temp_min, description, icon, error}) => {
 
     return(
-        <div className="container">
+        <div className="container text-info">
             <div className="cards pt-4">
                 <h1>{location}</h1>
                 <h5 className="py-4">

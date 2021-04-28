@@ -7,9 +7,10 @@ form input[name="country"]{
     background-color: transparent;
     color: white;
     border: 0;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid rgb(190, 79, 212);
     border-radius: 0;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: rgb(102, 21, 168);
+    font-size: 25px;
 
 }
 

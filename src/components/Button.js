@@ -6,7 +6,7 @@ const Button = ({location, addToFavorites}) => {
     if(location !== undefined){
         return (
             <div >
-                <button onClick={() => addToFavorites(location)} className="btn btn-danger">Add to Favorites</button>
+                <button onClick={() => addToFavorites(location)} className="btn btn-warning">Add to Favorites</button>
             </div>
         );
     }else{
