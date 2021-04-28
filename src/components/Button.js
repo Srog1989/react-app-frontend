@@ -1,12 +1,13 @@
 import React from 'react';
-
-const Button = ({location, addToFavorites}) => {
-
+import { connect } from 'react-redux'
+import { addFavorite } from './Actions/addFavorite'
+const Button = ({location, addFavorite}) => {
+let favorite = {location}
 
     if(location !== undefined){
         return (
             <div >
-                <button onClick={() => addToFavorites(location)} className="btn btn-warning">Add to Favorites</button>
+                <button onClick={() => addFavorite(favorite)} className="btn btn-warning">Add to Favorites</button>
             </div>
         );
     }else{
@@ -14,4 +15,4 @@ const Button = ({location, addToFavorites}) => {
     }
 }
 
-export default Button;
+export default connect(null,{addFavorite})(Button);

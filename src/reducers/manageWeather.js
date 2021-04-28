@@ -52,7 +52,8 @@ export default function manageWeather(state =  {
           }
 
           case 'ADD_TO_FAVORITES':
-              return{ ...state, favorites: [...state.favorites, action.favorite]}
+              console.log(action.payload.location)
+              return{favorites:  [...state.favorites, action.payload.location]}
       
     default:
       return state;

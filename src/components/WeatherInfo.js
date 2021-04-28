@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+// import Form from '../components/Form'
 
 const Weather = ({ location, temp_farenheit, temp_max, temp_min, description, icon, error}) => {
 
