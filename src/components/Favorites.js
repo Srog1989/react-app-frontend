@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Favorite from '../components/Favorite'
+import { getWeatherIcon} from './Actions/getWeatherIcon'
+import { setWeather} from './Actions/setWeather'
+import { getFavorites } from './Actions/getFavorites'
+
 
 let weatherIcon={
     Thunderstorm:"wi-thunderstorm",
@@ -15,6 +19,10 @@ let weatherIcon={
 
 const API_key="4215bb13a08c02af64771aeabee5aba7"
 class Favorites extends Component {
+
+    componentDidMount(){
+        this.props.getFavorites()
+    }
 
      locations = () => {
         if(this.props.favorites !== undefined ){
@@ -58,11 +66,11 @@ class Favorites extends Component {
 
 const mapStateToProps = ({favorites}) => ({favorites});
 
-const mapDispatchToProps = dispatch => ({
-    setWeather: weather => dispatch({type: "SET_WEATHER", weather }),
-    getWeatherIcon: (weatherIcon, rangeId) => dispatch({type: "GET_WEATHER_ICON", weatherIcon, rangeId })
-})
+// const mapDispatchToProps = dispatch => ({
+//     setWeather: weather => dispatch({type: "SET_WEATHER", weather }),
+//     getWeatherIcon: (weatherIcon, rangeId) => dispatch({type: "GET_WEATHER_ICON", weatherIcon, rangeId })
+// })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
+export default connect(mapStateToProps,{setWeather, getWeatherIcon, getFavorites})(Favorites);
 
