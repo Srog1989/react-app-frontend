@@ -4,16 +4,8 @@ import Form from '../components/Form'
 import WeatherInfo from '../components/WeatherInfo'
 import "weather-icons/css/weather-icons.css"
 import Button from '../components/Button'
-
-let weatherIcon={
-    Thunderstorm:"wi-thunderstorm",
-    Drizzle:"wi-sleet",
-    Rain:"wi-storm-showers",
-    Snow:"wi-snow",
-    Atmosphere:"wi-fog",
-    Clear:"wi-day-sunny",
-    Clouds:"wi-day-fog"
-  }
+import { setWeather } from '../components/Actions/setWeather'
+import { getWeatherIcon } from '../components/Actions/getWeatherIcon'
 
 
 const API_key="4215bb13a08c02af64771aeabee5aba7"
@@ -43,7 +35,7 @@ class WeatherContainer extends Component {
                 description: response.weather[0].description 
             };
             this.props.setWeather(weather);
-            this.props.getWeatherIcon(weatherIcon, response.weather[0].id);
+            this.props.getWeatherIcon(response.weather[0].id);
         }else{
             this.setState({error: true})
         }
@@ -53,14 +45,7 @@ class WeatherContainer extends Component {
         return (
             <div className=".bg-img">
                 <Form loadweather={this.getWeather} error={this.props.error}/>
-                <WeatherInfo
-                    // location={this.props.location}
-                    // temp_farenheit={this.props.farenheit}
-                    // temp_max={this.props.temp_max}
-                    // temp_min={this.props.temp_min}
-                    // description={this.props.description}
-                    // weatherIcon={this.props.icon}
-                /> 
+                <WeatherInfo /> 
                 <Button location={this.props.location} addToFavorites={this.props.addToFavorites}/>
             </div>
         );
@@ -68,12 +53,12 @@ class WeatherContainer extends Component {
 }
 const mapStateToProps = ({ location, temp_farenheit, temp_max, temp_min, description, icon, error}) => ({ location, temp_farenheit, temp_max, temp_min, description, icon, error})
 
-const mapDispatchToProps = dispatch => ({
-    setWeather: weather => dispatch({type: "SET_WEATHER", weather }),
-    getWeatherIcon: (weatherIcon, rangeId) => dispatch({type: "GET_WEATHER_ICON", weatherIcon, rangeId }),
-    addToFavorites: favorite => dispatch({type: "ADD_TO_FAVORITES", favorite})
-})
+// const mapDispatchToProps = dispatch => ({
+//     setWeather: weather => dispatch({type: "SET_WEATHER", weather }),
+//     getWeatherIcon: (weatherIcon, rangeId) => dispatch({type: "GET_WEATHER_ICON", weatherIcon, rangeId }),
+//     addToFavorites: favorite => dispatch({type: "ADD_TO_FAVORITES", favorite})
+// })
 
 
-export default connect(mapStateToProps, mapDispatchToProps) (WeatherContainer);
+export default connect(mapStateToProps,{setWeather, getWeatherIcon}) (WeatherContainer);
 
