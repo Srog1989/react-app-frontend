@@ -10,7 +10,6 @@ export const addFavorite = (favorite) => {
             body: JSON.stringify(favorite)
         })
         .then(resp => resp.json())
-        // .then(location => console.log(location))
         .then(location => dispatch({type: "ADD_TO_FAVORITES", payload:location}))
     }
 }
