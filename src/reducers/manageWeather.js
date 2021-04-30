@@ -54,6 +54,10 @@ export default function manageWeather(state =  {
           case 'ADD_TO_FAVORITES':
               console.log(action.payload.location)
               return{favorites:  [...state.favorites, action.payload.location]}
+
+            case 'SET_FAVORITES':
+                let faves = action.payload.map(fave => fave.location)
+                return{ ...state, favorites: faves}
       
     default:
       return state;
